@@ -13,7 +13,6 @@ interface IpinfoResponse {
 export async function fetchIPAddress(): Promise<string> {
   try {
     const response: AxiosResponse<IpifyResponse> = await axios.get("https://api.ipify.org?format=json");
-    console.log(process.env.PLASMO_PUBLIC_IPINFO_TOKEN)
     return response.data.ip;
   } catch (error) {
     throw new Error("Error fetching IP address: " + error.message);
