@@ -48,8 +48,16 @@ export const Button = () => {
         }
 
           <div className='w-[300px] mt-10 ml-4'>
-            {country && <div className="text-2xl text-white">Your country is {country == 'IN' ? `India` : 'None'}</div>}
-            {city && <div className="text-2xl text-white">and city is {city}</div>}
+            {country && 
+                <div className="text-2xl text-white">
+                    Your country is {country == 'IN' ? `India` : 'None'}
+                </div>
+            }
+            {city && 
+                <div className="text-2xl text-white">
+                    and city is {city}
+                </div>
+            }
         </div>
     </div>
   )
