@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { fetchCountryAndCity, fetchIPAddress } from "~api/api";
+import "./style.css"
 
 function IndexPopup() {
   const [ipAddress, setIpAddress] = useState<string | null>(null);
@@ -16,7 +17,7 @@ function IndexPopup() {
   }
 
   return (
-    <div style = {{width: 500, height: 500}}>
+    <div className="bg-blue-900 h-[500px] w-[500px]">
       <button onClick={handleClick}>
         Show My Location
       </button>   
